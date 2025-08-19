@@ -1,8 +1,8 @@
-name: bitcoin-knots
+name: btc-knots
 version: '28.1.knots20250305'
 summary: Fully validating Bitcoin peer-to-peer network node, wallet and GUI
 description: |
-  Bitcoin Core connects to the Bitcoin peer-to-peer network to download and
+  Bitcoin Knots connects to the Bitcoin peer-to-peer network to download and
   fully validate blocks and transactions. It also includes a wallet and
   graphical user interface.
 
@@ -16,8 +16,8 @@ apps:
     plugs: [home, removable-media, network, network-bind]
     environment:
       # Override HOME so the datadir is located at
-      # ~/snap/bitcoin-core/common/.bitcoin/ instead of
-      # ~/snap/bitcoin-core/current/.bitcoin/, and each new version of the
+      # ~/snap/btc-knots/common/.bitcoin/ instead of
+      # ~/snap/btc-knots/current/.bitcoin/, and each new version of the
       # snap won't have a different data directory:
       # https://docs.snapcraft.io/environment-variables/7983
       HOME: $SNAP_USER_COMMON
@@ -46,7 +46,7 @@ apps:
       HOME: $SNAP_USER_COMMON
 
 parts:
-  bitcoin-core:
+  bitcoin-knots:
     plugin: nil
     override-build: |
       env | grep SNAP
