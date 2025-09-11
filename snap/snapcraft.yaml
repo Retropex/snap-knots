@@ -45,6 +45,14 @@ apps:
     environment:
       HOME: $SNAP_USER_COMMON
 
+platforms:
+    amd64:
+        build-on: [amd64, arm64]
+        build-for: [amd64]
+    arm64:
+        build-on: [amd64, arm64]
+        build-for: [arm64]
+
 parts:
   bitcoin-knots:
     plugin: nil
